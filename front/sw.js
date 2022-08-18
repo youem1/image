@@ -1,10 +1,9 @@
 const CACHE_NAME = "version1";
 const urlsToCache = [
-    "/static/js/main.5e0ba60c.js",
+    "static/js/main.5e0ba60c.js",
     "/static/css/main.44fb2667.css",
     "/static/css/main.44fb2667.css.map",
     '/static/js/main.5e0ba60c.js.map',
-    // "/static/js/main.c359a66e",
     '/manifest.json',
     '/',
     '/index.html',
