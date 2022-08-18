@@ -1,6 +1,6 @@
 {
-    "name": "Instagram as Progressive Web App",
-    "short_name": "PWAGram",
+    "name": "A.Smart",
+    "short_name": "A.Smart",
     "icons": [],
     "start_url": "/index.html",
     "scope": ".",
