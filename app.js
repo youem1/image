@@ -37,7 +37,7 @@ app.get('/PWA', (req, res) => {
 })
 app.get('/sw.js', (req, res) => {
     console.log('file is request is:/PWA-file/src/js/sw.js');
-    res.sendFile(path.join(__dirname + '/front/PWA-file/sw.js'))
+    res.sendFile(path.join(__dirname + '/front/sw.js'))
 
 })
 
