@@ -1,8 +1,39 @@
 {
     "name": "A.Smart",
     "short_name": "A.Smart",
-    "icons": [],
-    "start_url": "/index.html",
+    "icons": [{
+            "src": "/static/media/android/android-launchericon-48-48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "/static/media/android/android-launchericon-72-72.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/static/media/android/android-launchericon-96-96.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "/static/media/android/android-launchericon-144-144.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/static/media/android/android-launchericon-192-192.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        },
+
+        {
+            "src": "/static/media/android/android-launchericon-512-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "./",
     "scope": ".",
     "display": "standalone",
     "orientation": "portrait-primary",
