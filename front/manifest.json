@@ -9,7 +9,7 @@
         {
             "src": "/static/media/android/android-launchericon-72-72.png",
             "type": "image/png",
-            "sizes": "96x96"
+            "sizes": "72x72"
         },
         {
             "src": "/static/media/android/android-launchericon-96-96.png",
