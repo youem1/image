@@ -1,8 +1,5 @@
 const CACHE_NAME = "version1";
-const urlsToCache = [
-
-
-];
+const urlsToCache = [];
 //install sw
 self.addEventListener('install', (event) => {
     console.log('[Service Worker]: installed')
