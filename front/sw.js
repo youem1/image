@@ -17,43 +17,53 @@ self.addEventListener('install', (event) => {
 //listen for request
 self.addEventListener('fetch', (event) => {
     console.log('[Service Worker]: fetched');
-    event.respondWith(
-            fetch(event.request)
-            .then(async res => {
-                const cache = await caches.open(CACHE_NAME);
-                cache.put(event.request.url, res.clone());
-                console.log('[Service Worker]:fetching.');
-                return res;
-            }).catch(err => {
-                caches.match(event.request)
-                    .then(res => {
-                        if (res) {
-                            console.log('[Service Worker]:caching.')
-                            return res;
+    // event.respondWith(
+    //         fetch(event.request)
+    //         .then(res => {
+    //             if (res) {
 
-                        } else {
-                            console.log('[Service Worker]:can not fetch and caching!')
-                        }
-                    })
-            })
-        )
-        // event.respondWith(
-        //     caches.match(event.request)
-        //     .then(function(response) {
-        //         if (response) {
-        //             return response;
-        //         } else {
-        //             return fetch(event.request)
-        //                 .then(function(res) {
-        //                     return caches.open(CACHE_NAME)
-        //                         .then(function(cache) {
-        //                             cache.put(event.request.url, res.clone());
-        //                             return res;
-        //                         })
-        //                 });
-        //         }
-        //     })
-        // );
+    //                 console.log('[Service Worker]:fetching.', res);
+    //                 return caches.open(CACHE_NAME)
+    //                     .then((cache) => {
+    //                         cache.put(event.request.url, res.clone());
+    //                         return res;
+
+    //                     })
+    //             }
+
+
+
+    //         }).catch(err => {
+    //             alert('برای دریافت اخرین نسخه برنامه لطفا اتصال خود را بررسی کنید')
+    //             caches.match(event.request)
+    //                 .then(res => {
+    //                     if (res) {
+    //                         console.log('[Service Worker]:caching.')
+    //                         return res;
+
+    //                     } else {
+    //                         console.log('[Service Worker]:can not fetch and caching!')
+    //                     }
+    //                 })
+    //         })
+    //     )
+    event.respondWith(
+        caches.match(event.request)
+        .then(function(response) {
+            if (response) {
+                return response;
+            } else {
+                return fetch(event.request)
+                    .then(function(res) {
+                        return caches.open(CACHE_NAME)
+                            .then(function(cache) {
+                                cache.put(event.request.url, res.clone());
+                                return res;
+                            })
+                    });
+            }
+        })
+    );
 
 
 })
