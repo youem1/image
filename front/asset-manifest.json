@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.ebaaa293.css",
-    "main.js": "/static/js/main.f69e3b8e.js",
+    "main.css": "/static/css/main.546d2e4f.css",
+    "main.js": "/static/js/main.d61c5fda.js",
     "static/media/BeFunky-photo.png": "/static/media/BeFunky-photo.ec1055cb2e4d4c73c45f.png",
     "static/media/receive-mail.png": "/static/media/receive-mail.5fa16a5761f4ffb41021.png",
     "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
-    "main.ebaaa293.css.map": "/static/css/main.ebaaa293.css.map",
-    "main.f69e3b8e.js.map": "/static/js/main.f69e3b8e.js.map"
+    "main.546d2e4f.css.map": "/static/css/main.546d2e4f.css.map",
+    "main.d61c5fda.js.map": "/static/js/main.d61c5fda.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebaaa293.css",
-    "static/js/main.f69e3b8e.js"
+    "static/css/main.546d2e4f.css",
+    "static/js/main.d61c5fda.js"
   ]
 }
