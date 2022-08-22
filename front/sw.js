@@ -1,4 +1,8 @@
-const CACHE_NAME = "version1";
+const CACHE_NAME = "version0001";
+// const CACHE_NAME = "version0001";
+// const CACHE_NAME = "version0001";
+// const CACHE_NAME = "version0001";
+// const CACHE_NAME = "version0001";
 const urlsToCache = [];
 //install sw
 self.addEventListener('install', (event) => {
