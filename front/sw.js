@@ -1,23 +1,11 @@
-const CACHE_NAME = "version00556";
-
-const urlsToCache = [
-    '/',
-    '/index.html',
-
-];
+const CACHE_NAME = "version0001";
+// const CACHE_NAME = "version0001";
+// const CACHE_NAME = "version0001";
+// const CACHE_NAME = "version0001";
+// const CACHE_NAME = "version0001";
+const urlsToCache = [];
 //install sw
 self.addEventListener('install', (event) => {
-    // event.waitUntil(
-    //     caches.keys()
-    //     .then(function(keyList) {
-    //         return Promise.all(keyList.map(function(key) {
-    //             if (key !== CACHE_NAME) {
-    //                 console.log('[Service Worker] Removing old cache.', key);
-    //                 return caches.delete(key);
-    //             }
-    //         }));
-    //     })
-    // );
     console.log('[Service Worker]: installed')
     event.waitUntil(
         caches.open(CACHE_NAME)
@@ -59,16 +47,13 @@ self.addEventListener('fetch', (event) => {
         caches.match(event.request)
         .then(function(response) {
             if (response) {
-                console.log('caching')
                 return response;
             } else {
                 return fetch(event.request)
                     .then(function(res) {
-                        console.log('fetching')
                         return caches.open(CACHE_NAME)
                             .then(function(cache) {
                                 cache.put(event.request.url, res.clone());
-                                console.log('cache update')
                                 return res;
                             })
                     });
