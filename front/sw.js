@@ -1,8 +1,9 @@
-const CACHE_NAME = "version0001";
-// const CACHE_NAME = "version0001";
-// const CACHE_NAME = "version0001";
-// const CACHE_NAME = "version0001";
-// const CACHE_NAME = "version0001";
+const CACHE_NAME = "version0002";
+const CACHE_NAME_STATIC = "static0002"
+    // const CACHE_NAME = "version0001";
+    // const CACHE_NAME = "version0001";
+    // const CACHE_NAME = "version0001";
+    // const CACHE_NAME = "version0001";
 const urlsToCache = [];
 //install sw
 self.addEventListener('install', (event) => {
@@ -51,7 +52,7 @@ self.addEventListener('fetch', (event) => {
             } else {
                 return fetch(event.request)
                     .then(function(res) {
-                        return caches.open(CACHE_NAME)
+                        return caches.open(CACHE_NAME_STATIC)
                             .then(function(cache) {
                                 cache.put(event.request.url, res.clone());
                                 return res;
