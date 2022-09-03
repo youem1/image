@@ -64,7 +64,10 @@ self.addEventListener('fetch', (event) => {
 
 
 })
-
+window.addEventListener('hashchange', () => {
+    alert('salam');
+    console.log('hhhhhhhhhhhhhhhhhhh')
+})
 
 //activate the sw
 self.addEventListener('activate', (event) => {
