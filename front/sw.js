@@ -4,7 +4,17 @@ const CACHE_NAME_STATIC = "static0002"
     // const CACHE_NAME = "version0001";
     // const CACHE_NAME = "version0001";
     // const CACHE_NAME = "version0001";
-const urlsToCache = [];
+const urlsToCache = [
+    'https://s24.picofile.com/file/8452672792/unlocked_1_.png',
+    'https://s24.picofile.com/file/8452672768/lock_1_.png',
+    'https://s25.picofile.com/file/8452672784/lock_2_.png',
+    'https://s24.picofile.com/file/8452730792/low_battery.png',
+    'https://s24.picofile.com/file/8452289734/battery_6_.png',
+    'https://s24.picofile.com/file/8452731442/batteru_2index.png',
+    'https://s25.picofile.com/file/8452289750/battery_7_.png',
+    'https://s24.picofile.com/file/8452289768/battery_8_.png',
+    'https://s25.picofile.com/file/8452730818/no_battery.png'
+];
 //install sw
 self.addEventListener('install', (event) => {
     console.log('[Service Worker]: installed')
@@ -22,28 +32,7 @@ self.addEventListener('install', (event) => {
 //listen for request
 self.addEventListener('fetch', (event) => {
     console.log('[Service Worker]: fetched');
-    // event.respondWith(
-    //         fetch(event.request)
-    //         .then(res => {
-    //             return caches.open(CACHE_NAME)
-    //                 .then(cache => {
-    //                     cache.put(event.request.url, res.clone());
-    //                     console.log('[Service Worker]:fetching.')
-    //                     return res;
-    //                 })
-    //         }).catch(err => {
-    //             caches.match(event.request)
-    //                 .then(res => {
-    //                     if (res) {
-    //                         console.log('[Service Worker]:caching.')
-    //                         return res;
 
-    //                     } else {
-    //                         console.log('[Service Worker]:can not fetch and caching!')
-    //                     }
-    //                 })
-    //         })
-    //     )
     event.respondWith(
         caches.match(event.request)
         .then(function(response) {
@@ -64,10 +53,7 @@ self.addEventListener('fetch', (event) => {
 
 
 })
-window.addEventListener('hashchange', () => {
-    alert('salam');
-    console.log('hhhhhhhhhhhhhhhhhhh')
-})
+
 
 //activate the sw
 self.addEventListener('activate', (event) => {
