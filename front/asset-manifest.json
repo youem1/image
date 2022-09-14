@@ -1,18 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.60d5d42e.css",
+    "main.css": "/static/css/main.7dd3b02e.css",
     "main.js": "/static/js/main.cd6c979a.js",
-    "static/media/telephone (2).png": "/static/media/telephone (2).fb244201058d6b0c101c.png",
-    "static/media/gmail.png": "/static/media/gmail.a2f2146f929409405da0.png",
     "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
-    "main.60d5d42e.css.map": "/static/css/main.60d5d42e.css.map",
+    "main.7dd3b02e.css.map": "/static/css/main.7dd3b02e.css.map",
     "main.cd6c979a.js.map": "/static/js/main.cd6c979a.js.map"
   },
   "entrypoints": [
-    "static/css/main.60d5d42e.css",
+    "static/css/main.7dd3b02e.css",
     "static/js/main.cd6c979a.js"
   ]
 }
